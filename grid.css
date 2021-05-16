@@ -1,0 +1,105 @@
+.board{
+    border: 10px solid rgb(131, 96, 64);
+    display: grid;
+    height: 400px;
+    width: 400px;
+    margin: 100px auto;
+    grid-template-columns: repeat(8,50px);
+    grid-template-rows: repeat(8,50px);
+    background-color: white;
+    font-size: 20px;
+}
+
+.board div:nth-child(-2n+7),
+div:nth-child(9) ~ div:nth-child(-2n+16), 
+div:nth-child(16) ~ div:nth-child(-2n+23), 
+div:nth-child(25) ~ div:nth-child(-2n+32), 
+div:nth-child(32) ~ div:nth-child(-2n+39), 
+div:nth-child(41) ~ div:nth-child(-2n+48), 
+div:nth-child(48) ~ div:nth-child(-2n+55), 
+div:nth-child(56) ~ div:nth-child(-2n+64){
+  background-color:rgb(138, 137, 137);
+}
+
+div{
+    text-align: center;
+}
+
+.board div:nth-child(-n+16)::after{
+    content:"\265F";
+}
+
+.board div:nth-last-child(-n+16)::after{
+    content:"\265F";
+}
+
+/* kuda */
+.board div:nth-child(2)::after{
+    content: "\265E";
+}
+
+.board div:nth-child(7)::after{
+    content: "\265E";
+}
+
+.board div:nth-child(58)::after{
+    content: "\265E";
+}
+
+.board div:nth-child(63)::after{
+    content: "\265E";
+}
+
+/* benteng */
+
+.board div:nth-child(1)::after{
+    content: "\265C";
+}
+
+.board div:nth-child(8)::after{
+    content: "\265C";
+}
+
+.board div:nth-child(64)::after{
+    content: "\265C";
+}
+
+.board div:nth-child(57)::after{
+    content: "\265C";
+}
+
+/* patih */
+.board div:nth-child(3)::after{
+    content: "\265D";
+}
+
+.board div:nth-child(6)::after{
+    content: "\265D";
+}
+
+.board div:nth-child(59)::after{
+    content: "\265D";
+}
+
+.board div:nth-child(62)::after{
+    content: "\265D";
+}
+
+/* raja */
+.board div:nth-child(4)::after{
+    content: "\265A";
+}
+
+.board div:nth-child(60)::after{
+    content: "\265B";
+}
+
+/* ratu */
+.board div:nth-child(5)::after{
+    content: "\265B";
+}
+
+.board div:nth-child(61)::after{
+    content: "\265B";
+}
+
